@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html ng-app="myApp" xmlns:constrain_width="http://www.w3.org/1999/xhtml">
+<head lang="en">
+	<meta charset="UTF-8">
+	<title></title>
+	<script type="text/javascript" src="assets/lib/angular/angular.js"></script>
+	<script type="text/javascript" src="assets/lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+	<link rel="stylesheet" href="assets/lib/bootstrap/dist/css/bootstrap.min.css">
+	<script type="text/javascript" src="assets/lib/angular-ui-router/release/angular-ui-router.js"></script>
+	<link rel="stylesheet" href="assets/lib/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/lib/bootstrap-social/bootstrap-social.css">
+	<script type="text/javascript" src="assets/lib/angular-hamburger-toggle/dist/angular-hamburger-toggle.min.js"></script>
+	<link rel="stylesheet" href="assets/lib/angular-hamburger-toggle/dist/angular-hamburger-toggle.min.css">
+	<link rel="stylesheet" href="assets/lib/angular-material/angular-material.min.css">
+	<script src="assets/lib/angular-material/angular-material.min.js"></script>
+	<script src="assets/lib/angular-animate/angular-animate.min.js"></script>
+	<script src="assets/lib/angular-aria/angular-aria.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="http://crisbeto.github.io/angular-svg-round-progressbar/roundProgress.min.js"></script>
+	<script src="http://maps.googleapis.com/maps/api/js"></script>
+	<link rel="stylesheet" href="assets/lib/materialize/css/materialize.min.css">
+	<script src="assets/lib/materialize/js/materialize.min.js"></script>
+	<script src="assets/lib/moment/min/moment.min.js"></script>
+	<script src="assets/lib/angular-ui-calendar/src/calendar.js"></script>
+	<link rel="stylesheet" href="assets/lib/fullcalendar/dist/fullcalendar.min.css">
+	<script src="assets/lib/fullcalendar/dist/fullcalendar.min.js"></script>
+	<script src="assets/lib/d3/d3.min.js"></script>
+	<script src="assets/lib/nvd3/nv.d3.min.js"></script>
+	<script src="assets/lib/angular-nvd3/dist/angular-nvd3.min.js"></script>
+	<link rel="stylesheet" href="assets/lib/nvd3/nv.d3.min.css">
+	<link rel="stylesheet" href="assets/lib/angular-timeline/dist/angular-timeline.css">
+	<script src="assets/lib/angular-timeline/dist/angular-timeline.js"></script>
+	<link rel="stylesheet" href="assets/css/custom.css">
+	<script type="text/javascript" src="assets/js/controllers.js"></script>
+	<script type="text/javascript" src="assets/js/app.js"></script>
+
+</head>
+<body ng-controller="indexController">
+<div class="Leftsidenav" ng-class="{open: tgState}">
+	<img class="leftSideNavPic" src="assets/images/sidebarPic.PNG">
+
+	<ul>
+		<div class="col-lg-3 col-lg-push-1">
+			<i class="sideBarIcon greyText small material-icons">dashboard</i>
+		</div>
+
+		<div class="nav col-lg-9 col-lg-pull-1">
+			<li>
+				<a href="#">Dashboard</a>
+			</li>
+		</div>
+
+		<div class="col-lg-3 col-lg-push-1">
+			<i class="sideBarIcon greyText small material-icons">mail</i>
+		</div>
+
+		<div class="nav col-lg-9 col-lg-pull-1">
+			<li>
+				<a href="#">Mailbox</a>
+			</li>
+		</div>
+
+		<div class="col-lg-3 col-lg-push-1">
+			<i class="sideBarIcon greyText small material-icons">local_atm</i>
+		</div>
+
+		<div class="nav col-lg-9 col-lg-pull-1">
+			<li>
+				<a href="#">Invoices</a>
+			</li>
+		</div>
+
+		<div class="col-lg-3 col-lg-push-1">
+			<i class="sideBarIcon greyText small material-icons">assessment</i>
+		</div>
+
+		<div class="nav col-lg-9 col-lg-pull-1">
+			<li>
+				<a href="#">Scrum Board</a>
+			</li>
+		</div>
+
+		<div class="col-lg-3 col-lg-push-1">
+			<i class="sideBarIcon greyText small material-icons">code</i>
+		</div>
+
+		<div class="nav col-lg-9 col-lg-pull-1">
+			<li>
+				<a href="#">Snippets</a>
+			</li>
+		</div>
+
+		<div class="col-lg-3 col-lg-push-1">
+			<i class="sideBarIcon greyText small material-icons">face</i>
+		</div>
+
+		<div class="nav col-lg-9 col-lg-pull-1">
+			<li>
+				<a href="#">User Profile</a>
+			</li>
+		</div>
+
+		<div class="col-lg-3 col-lg-push-1">
+			<i class="sideBarIcon greyText small material-icons">subject</i>
+		</div>
+
+		<div class="nav col-lg-9 col-lg-pull-1">
+			<li class="open"  dropdown dropdown-append-to-body>
+				<a class="dropdown-toggle" dropdown-toggle  href="#">Forms<span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="#">Regular Elements</a></li>
+					<li><a href="#">Advanced Elements</a></li>
+					<li><a href="#">File Upload</a></li>
+					<li><a href="#">Validation</a></li>
+					<li><a href="#">Wizard</a></li>
+
+				</ul>
+			</li>
+
+		</div>
+
+		<div class="col-lg-3 col-lg-push-1">
+			<i class="sideBarIcon greyText small material-icons">extension</i>
+		</div>
+
+		<div class="nav col-lg-9 col-lg-pull-1">
+			<li class="open"  dropdown dropdown-append-to-body>
+				<a class="dropdown-toggle" dropdown-toggle  href="#">Components<span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="#">Buttons</a></li>
+					<li><a href="#">Cards</a></li>
+					<li><a href="#">Colors</a></li>
+					<li><a href="#">Common</a></li>
+					<li><a href="#">Dropdown</a></li>
+
+				</ul>
+			</li>
+
+		</div>
+
+
+	</ul>
+
+</div>
+
+<div class="Rightsidenav" ng-class="{open: tgRightState}">
+	<md-content>
+		<md-tabs  md-dynamic-height   md-border-bottom>
+			<md-tab   label="T1">
+				<md-tab-label><i class="greyText small material-icons">timelapse</i></md-tab-label>
+
+				<md-content  class=" addOverflow md-padding">
+					<timeline>
+						<timeline-event ng-repeat="event in events">
+							<timeline-badge class="{{event.badgeClass}}">
+								<i class="glyphicon {{event.badgeIconClass}}"></i>
+							</timeline-badge>
+							<timeline-panel class="{{event.badgeClass}}">
+								<timeline-heading>
+									<p>{{event.title}}</p>
+								</timeline-heading>
+								<p>{{event.content}}</p>
+							</timeline-panel>
+						</timeline-event>
+					</timeline>
+				</md-content>
+			</md-tab>
+
+			<md-tab  label="T2">
+				<md-tab-label><i class=" greyText small material-icons">chat</i></md-tab-label>
+				<md-content  class="addOverflow md-padding">
+					<timeline>
+						<timeline-event ng-repeat="event in events">
+							<timeline-badge class="{{event.badgeClass}}">
+								<img ng-src="{{event.img}}">
+							</timeline-badge>
+
+							<timeline-panel class="{{event.badgeClass}}">
+								<p>{{event.msg}}</p>
+							</timeline-panel>
+						</timeline-event>
+					</timeline>
+				</md-content>
+			</md-tab>
+
+
+			<md-tab  label="T3">
+				<md-tab-label><i class="greyText small material-icons">settings_applications</i></md-tab-label>
+				<md-content  class="addOverflow md-padding">
+					<div class="row">
+                       <h2>General Settings</h2>
+					</div>
+
+					<div class="row">
+						<div class="col-lg-8">
+							<p><b>Site Online</b></p>
+							<p>Lorem ipsum dolor sit...</p>
+						</div>
+
+						<div class="col-lg-4">
+							<md-switch class="md-primary SeagreenSwitch" ng-model="switchTrue" aria-label="Switch 1">
+							</md-switch>
+						</div>
+					</div>
+					<hr>
+
+					<div class="row">
+						<div class="col-lg-8">
+							<p><b>Search Engine</b></p>
+							<p>Lorem ipsum dolor sit...</p>
+							<p>{{switchState}}</p>
+						</div>
+
+						<div class="col-lg-4">
+							<md-switch class="md-primary SeagreenSwitch" ng-model="switchFalse" aria-label="Switch 1">
+							</md-switch>
+						</div>
+					</div>
+					<hr>
+
+					<div class="row">
+						<div class="col-lg-8">
+							<p><b>Use URL rewritting</b></p>
+							<p>Lorem ipsum dolor sit...</p>
+							<p>{{switchState}}</p>
+						</div>
+
+						<div class="col-lg-4">
+							<md-switch class="md-primary SeagreenSwitch" ng-model="switchFalse" aria-label="Switch 1">
+							</md-switch>
+						</div>
+					</div>
+					<hr>
+                    <br>
+					<div class="row">
+						<h2>Other Settings</h2>
+					</div>
+
+					<div class="row">
+						<div class="col-lg-8">
+							<p><b>Tab Bar Enabled</b></p>
+							<p>Lorem ipsum dolor sit...</p>
+							<p>{{switchState}}</p>
+						</div>
+
+						<div class="col-lg-4">
+							<md-switch class="md-primary greenSwitch" ng-model="switchTrue" aria-label="Switch 1">
+							</md-switch>
+						</div>
+					</div>
+					<hr>
+
+					<div class="row">
+						<div class="col-lg-8">
+							<p><b>Api Enabled</b></p>
+							<p>Lorem ipsum dolor sit...</p>
+							<p>{{switchState}}</p>
+						</div>
+
+						<div class="col-lg-4">
+							<md-switch class="md-primary greenSwitch" ng-model="switchFalse" aria-label="Switch 1">
+							</md-switch>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-lg-8">
+							<p><b>JS Files</b></p>
+							<p>Lorem ipsum dolor sit...</p>
+							<p>{{switchState}}</p>
+						</div>
+
+						<div class="col-lg-4">
+							<md-switch ng-model="switchTrue" aria-label="Switch 1">
+							</md-switch>
+						</div>
+					</div>
+					<hr>
+
+
+				</md-content>
+			</md-tab>
+
+		</md-tabs>
+	</md-content>
+
+</div>
+
+
+<div class="content" ng-class="{'Leftsidenav-open': tgState}">
+	<header>
+		<nav class=" navbar blueBack navbar-default" role="navigation">
+			<div class="container-fluid ">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" ng-init="isCollapsed = true" ng-click="isCollapsed = !isCollapsed">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div collapse="isCollapsed" class="navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li><a><hamburger-toggle state="tgState" class="hamburger-toggle"></hamburger-toggle></a></li>
+						<li><a><i class="dropdown-button navbar-LefticonStyle material-icons" data-activates='dropdown1'>view_module</i></a></li>
+						<div  ng-click="$event.stopPropagation()"  id='dropdown1' class='dropdown-content dropdown-size'>
+							<div  class="row">
+								<div class="col-lg-9">
+									<div class="row">
+										<div class="col-lg-1 col-lg-offset-1">
+											<i class="sideBarIcon greyText medium material-icons">mail</i>
+											<p>MailBox</p>
+										</div>
+
+										<div class="col-lg-1 col-lg-offset-3">
+											<i class="sideBarIcon greyText medium material-icons">local_atm</i>
+											<p>Invoices</p>
+										</div>
+
+										<div class="col-lg-1 col-lg-offset-3">
+											<i class="sideBarIcon redColor medium material-icons">chat</i>
+											<p>Chat</p>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-lg-1 col-lg-offset-1">
+											<i class="sideBarIcon greyText medium material-icons">assessment</i>
+											<p>Scrum Board</p>
+										</div>
+
+										<div class="col-lg-1 col-lg-offset-3">
+											<i class="sideBarIcon greyText medium material-icons">code</i>
+											<p>Snippets</p>
+										</div>
+
+										<div class="col-lg-1 col-lg-offset-3">
+											<i class="sideBarIcon greyText medium material-icons">face</i>
+											<p>User Profile</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-3">
+									<h2>Components</h2>
+									<div class="list-group">
+									<a href="#" class="list-group-item ">Accordions</a>
+									<a href="#" class="list-group-item list-special">Buttons</a>
+									<a href="#" class="list-group-item list-special">Notifications</a>
+									<a href="#" class="list-group-item list-special">Sortable</a>
+									<a href="#" class="list-group-item list-special">Tabs</a>
+
+								</div>
+								</div>
+							</div>
+						</div>
+
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a><i class="navbar-RighticonStyle material-icons">search</i></a></li>
+						<li><a><i class="dropdown-button navbar-RighticonStyle material-icons" data-activates='dropdown2'>notifications</i></a></li>
+						<div ng-click="$event.stopPropagation()" id='dropdown2' class='dropdown-content dropdown2-size'>
+
+							<md-content>
+								<md-tabs md-border-bottom>
+									<md-tab label="MESSAGES">
+										<md-content class="md-padding">
+											<ul class="List" ng-repeat="item in userLocationData" ng-click="getuserLocation($index, item)">
+												<div class="col-lg-3">
+													<img class="usrImageStyle" ng-src={{item.userImg}}>
+												</div>
+
+												<div class="col-lg-9">
+													<li>
+														<p><b><span>{{item.name}} </span> </b></p>
+														<p>{{item.locationinfo}}
+														<hr>
+														</p>
+													</li>
+												</div>
+
+											</ul>
+										</md-content>
+									</md-tab>
+									<md-tab label="ALERTS">
+										<md-content class="md-padding">
+											<ul>
+												<div class="col-lg-3 col-lg-push-1">
+													<i class="sideBarIcon greyText small material-icons">dashboard</i>
+												</div>
+
+												<div class="nav col-lg-9 col-lg-pull-1">
+													<li>
+														<a href="#">Dashboard</a>
+													</li>
+												</div>
+
+												<div class="col-lg-3 col-lg-push-1">
+													<i class="sideBarIcon greyText small material-icons">mail</i>
+												</div>
+
+												<div class="nav col-lg-9 col-lg-pull-1">
+													<li>
+														<a href="#">Mailbox</a>
+													</li>
+												</div>
+												<div class="col-lg-3 col-lg-push-1">
+													<i class="sideBarIcon greyText small material-icons">mail</i>
+												</div>
+
+												<div class="nav col-lg-9 col-lg-pull-1">
+													<li>
+														<a href="#">Mailbox</a>
+													</li>
+												</div>	<div class="col-lg-3 col-lg-push-1">
+												<i class="sideBarIcon greyText small material-icons">mail</i>
+											</div>
+
+												<div class="nav col-lg-9 col-lg-pull-1">
+													<li>
+														<a href="#">Mailbox</a>
+													</li>
+												</div>	<div class="col-lg-3 col-lg-push-1">
+												<i class="sideBarIcon greyText small material-icons">mail</i>
+											</div>
+
+												<div class="nav col-lg-9 col-lg-pull-1">
+													<li>
+														<a href="#">Mailbox</a>
+													</li>
+												</div>	<div class="col-lg-3 col-lg-push-1">
+												<i class="sideBarIcon greyText small material-icons">mail</i>
+											</div>
+
+												<div class="nav col-lg-9 col-lg-pull-1">
+													<li>
+														<a href="#">Mailbox</a>
+													</li>
+												</div>
+											</ul>
+										</md-content>
+									</md-tab>
+								</md-tabs>
+							</md-content>						</div>
+						<li><a><hamburger-toggle state="tgRightState" class="hamburger-toggle"></hamburger-toggle></a></li>
+					</ul>
+
+				</div>
+			</div>
+		</nav>
+	</header>
+
+
+    <div class="contentBelowNav">
+
+		<div class="row">
+			<div class="col-lg-3">
+				<md-card class="card-space">
+					<span class="box-title greyText"> Visitors (Last 7d) </span>
+					<h2 class="box-value">12,456</h2>
+					<span class="box-image"><img src="assets/images/graph.PNG"> </span>
+				</md-card>
+			</div>
+
+			<div class="col-lg-3">
+				<md-card class="card-space">
+					<span class="box-title greyText"> Sale </span>
+					<h2 class="box-value">$142,384</h2>
+					<span class="box-image"><img src="assets/images/linechart.PNG"> </span>
+				</md-card>
+			</div>
+
+			<div class="col-lg-3">
+				<md-card class="card-space">
+					<span class="box-title greyText"> Orders Completed</span>
+					<h2 class="box-value">64%</h2>
+					<span class="box-image"><img src="assets/images/progress.PNG"> </span>
+				</md-card>
+			</div>
+
+			<div class="col-lg-3">
+				<md-card class="card-space">
+					<span class="box-title greyText"> Visitors (live) </span>
+					<h2 class="box-value">67</h2>
+					<span class="box-image box-image-linechart2" ><img src="assets/images/linechart2.PNG"> </span>
+				</md-card>
+			</div>
+
+		</div>
+
+
+		<div class="row">
+			<div class="col-lg-12">
+				<md-card class="card-space">
+					<h3 class="md-title">Chart<hr></h3>
+					<nvd3 options="options" data="data1" class="lineChartStyle"></nvd3>
+				</md-card>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-5-1 col-sm-4">
+				<div  class="card hoverable">
+					<div class="card-content">
+
+						   <span class=" radial"
+								 round-progress
+								 max="100"
+								 current="80"
+								 color="#3996d8"
+								 bgcolor="#eaeaea"
+								 radius="48"
+								 stroke="5"
+								 semi="false"
+								 rounded="true"
+								 clockwise="true"
+								 responsive="false"
+								 iterations="50"
+								 animation="easeInOutQuart"></span>
+
+								<i class="iconStyle material-icons">email</i>
+
+
+
+
+
+					</div>
+					<div class="card-action">
+						<span class="card-title-reveal card-title activator">User messa..<i class="material-icons right">more_vert</i></span>
+
+					</div>
+
+
+					<div class="card-reveal">
+						<span class="card-title-reveal card-title">User messa..<i class="material-icons right">close</i></span>
+						<br>
+						<p class="card-content-reveal">Loren ipsum dolor sit amet, consectutor adipsicling eit. Asucome lesia asd</p></div>
+				</div>
+			</div>
+
+			<div class="col-lg-5-1 col-sm-4">
+				<div class="card hoverable">
+					<div class="card-content">
+						<img class="box-topImage"  src="assets/images/convoGraph.PNG">
+					</div>
+					<div class="card-action">
+						<span class="card-title-reveal fontSize activator">Conversations<i class="material-icons right">more_vert</i></span>
+
+					</div>
+					<div class="card-reveal">
+						<span class="card-title-reveal card-title">Conversations<i class="material-icons right">close</i></span>
+						<br>
+						<p class="card-content-reveal">Loren ipsum dolor sit amet, consectutor adipsicling eit. Asucome lesia asd</p></div>
+				</div>
+			</div>
+
+			<div class="col-lg-5-1 col-sm-4">
+				<div class="card hoverable">
+					<div class="card-content">
+						<span class="radial"
+							  round-progress
+							  max="100"
+							  current="40"
+							  color="purple"
+							  bgcolor="#eaeaea"
+							  radius="48"
+							  stroke="5"
+							  semi="false"
+							  rounded="true"
+							  clockwise="true"
+							  responsive="false"
+							  iterations="50"
+							  animation="easeInOutQuart"></span>
+						<i class="iconStyle material-icons">assignment</i>
+					</div>
+					<div class="card-action">
+						<span class="card-title-reveal card-title activator">Tasks List<i class="material-icons right">more_vert</i></span>
+
+					</div>
+					<div class="card-reveal">
+						<span class="card-title-reveal card-title">Tasks List<i class="material-icons right">close</i></span>
+						<br>
+						<p class="card-content-reveal">Loren ipsum dolor sit amet, consectutor adipsicling eit.</p>
+						<a  class="waves-effect waves-light btn btn-small  btn-blue">More</a>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-5-1 col-sm-4">
+				<div class="card hoverable">
+					<div class="card-content">
+						<h2 class="box-centerTitle">53%</h2>
+						<span class="radial"
+							  round-progress
+							  max="100"
+							  current="53"
+							  color="#207d74"
+							  bgcolor="#eaeaea"
+							  radius="48"
+							  stroke="5"
+							  semi="false"
+							  rounded="true"
+							  clockwise="true"
+							  responsive="false"
+							  iterations="50"
+							  animation="easeInOutQuart"></span>
+					</div>
+					<div class="card-action">
+						<span class="card-title-reveal card-title  activator">Orders<i class="material-icons right">more_vert</i></span>
+
+					</div>
+					<div class="card-reveal">
+						<span class="card-title-reveal card-title">Orders<i class="material-icons right">close</i></span>
+						<br>
+						<p class="card-content-reveal">Loren ipsum dolor sit amet, consectutor adipsicling eit. Asucome lesia asd</p></div>
+				</div>
+			</div>
+
+			<div class="col-lg-5-1 col-sm-4">
+				<div class="card hoverable" >
+					<div class="card-content">
+						<span class="radial"
+							  round-progress
+							  max="100"
+							  current="35"
+							  color="#606988"
+							  bgcolor="#eaeaea"
+							  radius="48"
+							  stroke="5"
+							  semi="false"
+							  rounded="true"
+							  clockwise="true"
+							  responsive="false"
+							  iterations="50"
+							  animation="easeInOutQuart"></span>
+						<i class="iconStyle material-icons">person_add</i>
+					</div>
+					<div class="card-action">
+						<span class="card-title-reveal card-title activator">User Regist..<i class="material-icons right">more_vert</i></span>
+
+					</div>
+					<div class="card-reveal">
+						<span class="card-title-reveal card-title">User Regist..<i class="material-icons right">close</i></span>
+						<br>
+						<p class="card-content-reveal">Loren ipsum dolor sit amet, consectutor adipsicling eit. Asucome lesia asd</p></div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="row">
+			<div class="col-lg-6">
+				<md-card class="card-space">
+					<table class="table">
+						<thead>
+						<tr class="table-textColor">
+							<td>Task</td>
+							<td>Status</td>
+							<td>Progress</td>
+							<td>Due Date</td>
+						</tr>
+						</thead>
+
+						<tbody>
+						<tr>
+							<td><a href="#">ALTR-231</a></td>
+							<td>
+								<span class="table-progressText table-progressText-backcolor1">In progress</span>
+							</td>
+							<td>
+								<div class="progress table-progressColor">
+									<div  class="progress-bar table-progressBarColor1" role="progressbar">
+									</div>
+								</div>
+							</td>
+							<td class="table-textColor">
+								24.11.2015
+							</td>
+						</tr>
+
+
+						<tr>
+							<td><a href="#">ALTR-231</a></td>
+							<td>
+								<span class="table-progressText table-progressText-backcolor2">Open</span>
+							</td>
+							<td>
+								<div class="progress table-progressColor">
+									<div  class="progress-bar" role="progressbar table-progressBarColor2">
+									</div>
+								</div>
+							</td>
+							<td class="table-textColor">
+								24.11.2015
+							</td>
+						</tr>
+
+
+						<tr>
+							<td><a href="#">ALTR-231</a></td>
+							<td>
+								<span class="table-progressText table-progressText-backcolor3">New</span>
+							</td>
+							<td>
+								<div class="progress table-progressColor">
+									<div  class="progress-bar table-progressBarColor3" role="progressbar">
+									</div>
+								</div>
+							</td>
+							<td class="table-textColor">
+								24.11.2015
+							</td>
+						</tr>
+
+
+						<tr>
+							<td><a href="#">ALTR-231</a></td>
+							<td>
+								<span class="table-progressText table-progressText-backcolor4">Resolved</span>
+							</td>
+							<td>
+								<div  class="progress table-progressColor">
+									<div  class="progress-bar table-progressBarColor4" role="progressbar">
+									</div>
+								</div>
+							</td>
+							<td class="table-textColor">
+								24.11.2015
+							</td>
+						</tr>
+
+
+						<tr>
+							<td><a href="#">ALTR-231</a></td>
+							<td>
+								<span class="table-progressText table-progressText-backcolor5">Overdue</span>
+							</td>
+							<td>
+								<div  class="progress table-progressColor">
+									<div  class="progress-bar table-progressBarColor5" role="progressbar">
+									</div>
+								</div>
+							</td>
+							<td class="table-textColor">
+								24.11.2015
+							</td>
+						</tr>
+
+
+						<tr>
+							<td><a href="#">ALTR-231</a></td>
+							<td>
+								<span class="table-progressText table-progressText-backcolor4">Open</span>
+							</td>
+							<td>
+								<div class="progress table-progressColor">
+									<div  class="progress-bar table-progressBarColor6" role="progressbar">
+									</div>
+								</div>
+							</td>
+							<td class="table-textColor">
+								24.11.2015
+							</td>
+						</tr>
+
+						<tr><td></td><td></td><td></td><td></td></tr>
+						</tbody>
+					</table>
+				</md-card>
+			</div>
+
+			<div class="col-lg-6">
+				<md-card class="card-space">
+					<h3 class="md-title">Statistics</h3>
+					<nvd3 options="optionscompare" data="dataset"></nvd3>
+				</md-card>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="col-lg-3-1">
+				<div class="card">
+					<div class="card-image Lightbluebackground">
+
+					   <img class="center-block" style="position: absolute; margin-top:10px;  height:80px; width:130px;" src="assets/images/lizaPic.png">
+						<h2 class="profileName">Liza Bartell</h2>
+						<p class="emailStyle">tintin@gmail.com</p>
+					</div>
+					<div class="card-content">
+						<ul>
+
+							<div class="col-xs-3">
+								<span class="glyphicon glyphicon-envelope"  aria-hidden="true"></span>
+							</div>
+
+							<div class="col-xs-9 ">
+								<li>
+									<p><b> tintin@gmail.com </b></p>
+									<p>Email
+									<hr>
+									</p>
+								</li>
+							</div>
+
+
+
+
+							<div class="col-xs-3">
+								<span class="glyphicon glyphicon-earphone"  aria-hidden="true"></span>
+							</div>
+
+							<div class="col-xs-9 ">
+								<li>
+									<p><b> 1-569-234-22 </b></p>
+									<p>Phone
+									<hr>
+									</p>
+								</li>
+							</div>
+
+
+
+
+							<div class="col-xs-3">
+								<a class="greyBack btn btn-lg btn-social-icon btn-facebook">
+									<i class="fa fa-facebook"></i>
+								</a>						   </div>
+
+							<div class="col-xs-9 ">
+								<li>
+									<p><b>facebook.com/envato</b></p>
+									<p>Facebook
+									<hr>
+									</p>
+								</li>
+							</div>
+
+
+							<div class="col-xs-3">
+								<i class="fa fa-twitter fa-2x"></i>
+							</div>
+
+							<div class="col-xs-9 ">
+								<li>
+									<p><b> twitter.com/envato </b></p>
+									<p>Twitter
+									<hr>
+									</p>
+								</li>
+							</div>
+
+
+						</ul>
+
+					</div>
+
+				</div>
+			</div>
+
+			<div class="col-lg-3-1">
+				<div class="card">
+					<div class="card-image videobackground">
+						<iframe class="videoWidth embed-responsive-item" ng-src="{{videoSource}}" frameborder="0" allowfullscreen></iframe>
+
+					</div>
+					<div   class="card-content">
+
+						<ul class="List" ng-repeat="item in videodata" ng-click="videoclick($index, item)"  ng-class="{greenColor : $index == VidoeSelectedIndex}">
+							<div class="col-xs-3">
+								<span class="glyphicon glyphicon-play"  aria-hidden="true"></span>
+							</div>
+
+							<div class=" col-xs-9">
+								<li>
+									<p> <b>{{item.title}} </b></p>
+									<p>{{item.category}}
+									<hr>
+									</p>
+
+								</li>
+							</div>
+
+						</ul>
+
+					</div>
+				</div>
+			</div>
+
+
+			<div class="col-lg-3-1">
+				<div class="card">
+					<div class="card-image videobackground">
+						<img class="weatherImg" src="assets/images/weatherpic.PNG" >
+					</div>
+					<div   class="card-content">
+
+						<ul>
+
+							<div class="col-xs-3">
+								<span class="glyphicon glyphicon-envelope"  aria-hidden="true"></span>
+							</div>
+
+							<div class="col-xs-9 ">
+								<li>
+									<p><b> 22 Mostly Sunny </b></p>
+									<p>8 Aug (Saturday)
+									<hr>
+									</p>
+								</li>
+							</div>
+
+
+
+
+							<div class="col-xs-3">
+								<span class="glyphicon glyphicon-earphone"  aria-hidden="true"></span>
+							</div>
+
+							<div class="col-xs-9 ">
+								<li>
+									<p><b> 19 Partly Cloudy </b></p>
+									<p>9 Aug (Sunday)
+									<hr>
+									</p>
+								</li>
+							</div>
+
+
+
+
+							<div class="col-xs-3">
+								<a class="greyBack btn btn-lg btn-social-icon btn-facebook">
+									<i class="fa fa-facebook"></i>
+								</a>						   </div>
+
+							<div class="col-xs-9 ">
+								<li>
+									<p><b>16 Rainy</b></p>
+									<p>10 Aug (Monday)
+									<hr>
+									</p>
+								</li>
+							</div>
+
+
+							<div class="col-xs-3">
+								<i class="fa fa-twitter fa-2x"></i>
+							</div>
+
+							<div class="col-xs-9 ">
+								<li>
+									<p><b> 24 Sunny</b></p>
+									<p>10 Aug (Monday)
+									<hr>
+									</p>
+								</li>
+							</div>
+
+
+						</ul>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row twoColPadding">
+			<div class="col-lg-6">
+				<div class="card">.
+					<div class="card-content">
+					    <a ng-click="showDialog($event)" class="silverBtn positionAddBtn waves-effect waves-light btn-floating"><i class="material-icons">add</i></a>
+						<div class="calendar" ui-calendar="calendarOptions" ng-model="eventSources"></div>
+
+				</div>
+				</div>
+			</div>
+
+			<div class="col-lg-6">
+				<div class="card">
+					<div class="card-image mapbackground">
+						<div id="googleMap" class="mapStyle"></div>
+					</div>
+					<div class="card-content">
+						<table class="table mapTable">
+								<tr ng-repeat="item in userLocationData" ng-click="getuserLocation($index, item)">
+									<td><img ng-src={{item.userImg}}></td>
+									<td>
+										<p><b><span ng-class="{greenColor : $index == LocationSelectedIndex}">{{item.name}} </span> </b></p>
+										<p>{{item.locationinfo}}
+										<hr>
+										</p>
+									</td>
+								</tr>
+
+						</table>
+
+					</div>  <!-- end of card-content -->
+
+				</div>   <!-- end of card-->
+			</div>  <!-- end of col-lg-6 -->
+		</div>
+	</div>
+
+	   </div>
+
+
+
+
+
+
+</body>
+</html>

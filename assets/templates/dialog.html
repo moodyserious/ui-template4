@@ -1,0 +1,80 @@
+<md-dialog aria-label="Mango (Fruit)">
+    <form>
+        <md-dialog-content style="max-width:800px;max-height:810px; ">
+            <form ng-submit="addEvent(title, link, dateinfo)">
+                <h2>New Event</h2>
+                <md-input-container flex>
+                    <label>Event Title</label>
+                    <input ng-model="title" required>
+                </md-input-container>
+
+                <md-input-container flex>
+                    <label>Event Link</label>
+                    <input ng-model="link">
+                </md-input-container>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <label>Event Date</label>
+                        <input ng-model="dateinfo" type="date" class="datepicker" required>
+                    </div>
+                    <div class="col-lg-3">
+
+                        <label for="sel1">Event Start</label>
+                        <br><br>
+                        <select class="form-control" id="sel1">
+                            <option>00:00</option>
+                            <option>00:30</option>
+                            <option>01:00</option>
+                            <option>01:30</option>
+                            <option>02:00</option>
+                            <option>02:30</option>
+                            <option>02:30</option>
+                            <option>03:00</option>
+                            <option>03:30</option>
+                            <option>04:00</option>
+                            <option>04:30</option>
+                            <option>05:00</option>
+                            <option>05:30</option>
+                            <option>06:00</option>
+                            <option>06:30</option>
+                            <option>07:00</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-3">
+                        <label for="sel2">Event End</label>
+                        <br><br>
+
+                        <select class="form-control" id="sel2">
+                            <option>00:00</option>
+                            <option>00:30</option>
+                            <option>01:00</option>
+                            <option>01:30</option>
+                            <option>02:00</option>
+                            <option>02:30</option>
+                            <option>02:30</option>
+                            <option>03:00</option>
+                            <option>03:30</option>
+                            <option>04:00</option>
+                            <option>04:30</option>
+                            <option>05:00</option>
+                            <option>05:30</option>
+                            <option>06:00</option>
+                            <option>06:30</option>
+                            <option>07:00</option>
+                        </select>
+                    </div>
+                </div>
+
+            </form>
+        </md-dialog-content>
+        <div class="md-actions" layout="row">
+            <span flex></span>
+            <md-button ng-click="answer('not useful')">
+                Close
+            </md-button>
+            <md-button type="submit" ng-click="answer('useful')" style="margin-right:20px; color:blue;">
+                Add Event
+           </md-button>
+        </div>
+    </form>
+</md-dialog>

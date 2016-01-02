@@ -1,0 +1,29 @@
+.silverBtn{
+    background: #D1D0CE !important;
+}
+
+
+.SeagreenSwitch.md-checked .md-thumb {
+    background-color: #008080 !important;
+}
+
+.greenSwitch.md-checked .md-thumb {
+    background-color: #52D017 !important;
+}
+
+.greyText{
+    color:grey;
+}
+
+.greenColor{
+    color:green;
+}
+
+.btn-blue{
+    background: blue;
+}
+
+.btn-blue:hover{
+    background: blue;
+    color:white;
+}
