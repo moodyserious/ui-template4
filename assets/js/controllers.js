@@ -94,12 +94,12 @@ controllers.controller("indexController", function($scope, $state,  $sce, $log, 
 
   ];
 
- $scope.videoSource =  $sce.trustAsResourceUrl("http://www.youtube.com/embed/-CYs99M7hzA");
+ $scope.videoSource =  $sce.trustAsResourceUrl("https://www.youtube.com/embed/-CYs99M7hzA");
  $scope.videodata = [
-  {title : "Unboxing the HERO4", category: "Mashable", source: "http://www.youtube.com/embed/-CYs99M7hzA"},
-  {title : "Apple Watch Unboxing", category: "Unbox", source: "http://www.youtube.com/embed/te689fEo2pY"},
-  {title : "Power Transmitter", category: "Techcrunch", source: "http://www.youtube.com/embed/7AFJeaYojhU"},
-  {title : "Macbook Design", category: "Apple", source: "http://www.youtube.com/embed/hajnEpCq5SE"}
+  {title : "Unboxing the HERO4", category: "Mashable", source: "https://www.youtube.com/embed/-CYs99M7hzA"},
+  {title : "Apple Watch Unboxing", category: "Unbox", source: "https://www.youtube.com/embed/te689fEo2pY"},
+  {title : "Power Transmitter", category: "Techcrunch", source: "https://www.youtube.com/embed/7AFJeaYojhU"},
+  {title : "Macbook Design", category: "Apple", source: "https://www.youtube.com/embed/hajnEpCq5SE"}
  ]
 
  $scope.VidoeSelectedIndex = 0;
